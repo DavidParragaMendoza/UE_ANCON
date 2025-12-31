@@ -1,4 +1,0 @@
-[23-Jan-2024 01:00:04 America/Guayaquil] PHP Warning:  finfo_file(): Empty filename or path in /home/ueanconc/public_html/sistema/CONFIG/Libros/upload.php on line 31
-[23-Jan-2024 01:00:04 America/Guayaquil] PHP Warning:  file_get_contents(): Filename cannot be empty in /home/ueanconc/public_html/sistema/CONFIG/Libros/upload.php on line 40
-[09-Feb-2024 01:39:46 America/Guayaquil] PHP Warning:  finfo_file(): Empty filename or path in /home/ueanconc/public_html/sistema/CONFIG/Libros/upload.php on line 31
-[09-Feb-2024 01:39:46 America/Guayaquil] PHP Warning:  file_get_contents(): Filename cannot be empty in /home/ueanconc/public_html/sistema/CONFIG/Libros/upload.php on line 40
