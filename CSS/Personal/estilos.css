@@ -1,0 +1,297 @@
+*{
+  margin:0;
+  padding:0;  
+}
+
+:root {
+  --padding-container: 1px 0;
+}
+
+body{
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  background-attachment: fixed;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  color: #ffffff;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  z-index: 1000;
+  box-sizing: border-box;
+  animation: change cubic-bezier(.91,.18,.7,.95) both;
+  animation-timeline: scroll(root);
+  animation-range: 0 200px;
+}
+
+@keyframes change {
+  to {
+      background: rgba(255, 255, 255, 0.9);
+      color: #1a1a1a;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      height: 60px;
+  }
+}
+
+header a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit !important;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+  width: auto;
+  height: auto;
+}
+
+header a:hover {
+  transform: scale(1.1);
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  flex: 1;
+  margin: 0;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .4s ease-in-out,transform .4s ease-in-out
+}
+
+.fade-in.active {
+  opacity: 1;
+  transform: translateY(0)
+}
+
+h3{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 25px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.sect1{
+  display: flex;
+  justify-content: center;
+  height: 725px;
+  align-items: center;
+}
+
+.sect2{
+  display: flex;
+  justify-content: center;
+  height: 725px;
+  align-items: center;
+}
+
+.sect3{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+   
+.contenedor2{
+  display: inline-flex;
+  padding: 25px;
+}
+
+.contenedor3{
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap; 
+  justify-content: center;
+}
+  
+  
+.card {
+  width: 280px;
+  height: 280px;
+  border-radius: 32px;
+  position: relative;
+  box-shadow: inset #604b4a8a 0px 70px 30px -50px;
+  transition: all 0.5s ease-in-out;
+  background: #f0f8ffb0;
+  margin: 20px;
+}
+    
+.card .mail {
+  position: absolute;
+  right: 2rem;
+  top: 1.4rem;
+  background: transparent;
+  border: none;
+}
+    
+.card .profile-pic {
+  position: absolute;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  top: 5px;
+  left: 3px;
+  border-radius: 22px;
+  z-index: 1;
+  border: 0px solid #ffffff;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out 0.2s, z-index 0.5s ease-in-out 0.2s;
+}
+    
+.card .profile-pic img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  -o-object-position: 0px 0px;
+  object-position: 0px 0px;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.card .profile-pic svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: 0px 0px;
+  object-position: 0px 0px;
+  transform-origin: 45% 20%;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.card .bottom {
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  background-image: linear-gradient(140deg, #a5ddff 0, #5389f2 50%, #083c76 100%);
+  top: 81%;
+  border-radius: 29px;
+  z-index: 2;
+  box-shadow: rgba(96, 75, 74, 0.1882352941) 0px 5px 5px 0px inset;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+    
+.card .bottom .content {
+  position: absolute;
+  bottom: 0;
+  left: 1.5rem;
+  right: 1.5rem;
+  height: 160px;
+}
+    
+.card .bottom .content .name {
+  display: block;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: bold;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+    
+.card .bottom .content .about-me {
+  display: block;
+  font-size: 0.9rem;
+  color: white;
+  margin-top: 0rem;
+}
+    
+.card .bottom .bottom-bottom {
+  position: absolute;
+  bottom: 1rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+    
+.card .bottom .bottom-bottom  {
+  display: flex;
+  gap: 2rem;
+  height: 16px;
+}
+    
+.card .bottom .bottom-bottom  svg {
+  height: 20px;
+  fill: white;
+  filter: drop-shadow(0 5px 5px rgba(165, 132, 130, 0.1333333333));
+}
+    
+.card .bottom .bottom-bottom .button {
+  background: white;
+  color: #000000;
+  border: none;
+  border-radius: 13px;
+  font-size: 0.6rem;
+  padding: 0.3rem  0.6rem;
+  margin-left: auto;
+}
+
+.button{
+  height: 30px;
+}
+    
+.card .bottom .bottom-bottom .button:hover {
+  background: #000000;
+  color: white;
+}
+
+.card:hover {
+  border-top-left-radius: 55px;
+}
+
+.card:hover .bottom {
+  top: 20%;
+  border-radius: 80px 29px 29px 29px;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+}
+    
+.card:hover .profile-pic {
+  width: 100px;
+  height: 100px;
+  aspect-ratio: 1;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  z-index: 3;
+  border: 7px solid #000000;
+  box-shadow: rgba(96, 75, 74, 0.1882352941) 0px 5px 5px 0px;
+  transition: all 0.5s ease-in-out, z-index 0.5s ease-in-out 0.1s;
+}
+   
+.card:hover .profile-pic img {
+  -o-object-position: 10px 10px;
+  object-position: 0px 0px;
+  transition: all 0.5s ease-in-out 0.5s;
+}
+
+.nombre{
+  color: aliceblue;
+  font-size: 16px;
+  font-weight: 900;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover  .nombre{
+  display: none;
+  transition: all 0.5s ease-in-out, z-index 0.5s ease-in-out 0.1s;
+}

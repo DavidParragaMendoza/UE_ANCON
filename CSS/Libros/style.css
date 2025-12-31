@@ -1,0 +1,66 @@
+
+*{
+ font-family: 'Salsa', cursive;
+}
+
+main{
+  padding: 4rem 2rem;
+}
+
+.hr-line {
+  border-top: 4px solid transparent;
+  background: linear-gradient(white, white) padding-box, linear-gradient(90deg, White, DimGrey, White) border-box;
+}
+
+a{
+  text-decoration: none;
+}
+
+h2 {
+  color: #454646;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+button.neumorphic {
+  border: 0.5rem solid transparent;
+  border-radius: 1rem;
+  color: hsl(0 0% 10%);
+  background: none;
+  --shadow: -.5rem -.5rem 1rem #ffffffbf, .5rem .5rem 1rem #80808080;
+  box-shadow: var(--shadow);
+  outline: none;  
+  transition: all 0.1s;
+  
+  &:hover, &:focus-visible {
+    color: #7b80f0;
+    scale: 1.1
+  }
+
+  &:active, &.active{
+    box-shadow: var(--shadow),
+    inset .5rem .5rem 1rem #80808080,
+    inset -.5rem -.5rem 1rem #ffffffbf;
+    color: #7b80f0;
+  }  
+}
+
+span {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+section {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.buttons {
+  display: inline-grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 0.5fr));
+  padding: 15px;
+  align-items: center;
+}

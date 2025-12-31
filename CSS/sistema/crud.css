@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Salsa', cursive;
+}
+body{
+    background-color: #edededd3;
+   
+}
+
+header{
+    display:flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+nav{
+    height: 58px;
+    width: 330px;
+    display:flex;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.icons{
+    text-decoration: none;
+    background-color: #000000;
+    width: 59px;
+    height: 40px;
+    border-radius: 10px;
+    color: aliceblue;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.icons:hover{
+    background-color: #000000;
+    color:aqua;
+}
+
+
+section{
+    width: 90%;
+    max-width: 1350px;
+    margin: 25px auto;
+    overflow: hidden;
+}
+
+.Acciones{
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+}
+.perfil{
+    width: 50px;
+}
+
+i{
+    font-size: 30px;
+    text-decoration: none;    
+}

@@ -1,0 +1,148 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Salsa', cursive;
+}
+
+.contenedor{
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #98ade9;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 7px 7px 10px 3px #24004628;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 37px;
+  font-size: 17px;
+}
+.div_label{
+  color: black;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div_label-l{
+  color: black;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 7px;
+}
+
+#chk {
+  display: none;
+}
+
+
+.login {
+  position: relative;
+  width: 100%;
+  height: 378px;
+}
+
+.login label {
+  margin: 25% 0 5%;
+}
+
+label {
+  color: #fff;
+  font-size: 32px;
+  justify-content: center;
+  display: flex;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+}
+
+.input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 34px;
+  padding: 7px 7px;
+  background-color: rgb(247, 243, 243);
+  border-radius: 10px;
+  box-shadow: 12.5px 12.5px 10px rgba(0, 0, 0, 0.015),100px 100px 80px rgba(0, 0, 0, 0.03);
+}
+
+.input:focus {
+  border: 1px solid rgb(23, 111, 211);
+}
+
+
+.register {
+  background: #eee;
+  border-radius: 60% / 10%;
+  transform: translateY(13%);
+  transition: .8s ease-in-out;
+}
+
+.register label {
+  color: #98ade9;
+  transform: scale(0.6);
+}
+
+#chk:checked ~ .register {
+  transform: translateY(-63%);
+}
+
+#chk:checked ~ .register label {
+  transform: scale(1);
+  margin: 0% 0px 0%;
+}
+
+#chk:checked ~ .login label {
+  transform: scale(.6);
+  margin: 5% 0 5%;
+}   
+
+
+.form button {
+  width: 85%;
+  height: 40px;
+  margin: 16px auto 10%;
+  color: #000;
+  background: #8179ff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: .2s ease-in;
+}
+
+.form button:hover {
+  background-color: #ffffff;
+  color:#000;
+}
+
+.avatar {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(23, 111, 211);
+  border-radius: 50%;
+  align-self: center;
+  padding: 6px;
+  cursor: pointer;
+  box-shadow: 12.5px 12.5px 10px rgba(0, 0, 0, 0.015),100px 100px 80px rgba(0, 0, 0, 0.03);
+}
+
+#file {
+  display: none;
+}

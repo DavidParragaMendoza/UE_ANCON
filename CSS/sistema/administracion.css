@@ -1,0 +1,127 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Salsa', cursive;
+  }
+  
+  body{
+    background-image: url(../../IMG/pagina_principal/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  
+  
+  .contenedor{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .card {
+    display: flex;
+    width: 700px;
+    height: 250px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  
+  .item {
+    display: flex;
+    border-radius: 24px;
+    width: 200px;
+    height: 250px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+   
+  .item:hover {
+      transform: scale(1.95);
+      transition: all 1s ease-in-out;
+      rotate: 360deg;
+  }
+    
+  .item img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 7px;
+  }
+    
+  .item--1 {
+    background: #9bbfdb;
+  }
+    
+  .item--2 {
+    background: #ffffff;
+    /* background: #787474b3; */
+  }
+    
+  
+  .quantity {
+    font-size: 25px;
+    font-weight: 600;
+  }
+    
+  .text {
+    font-size: 17px;
+    font-family: inherit;
+    font-weight: 600;
+    }
+    
+  .text--1 {
+    color: rgb(255 255 255);
+  }
+    
+  .text--2 {
+    color: rgb(29 155 255);
+  }
+    
+  .acciones{
+    display: flex;
+    height: 45px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+  
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  .username{
+    width: 197px;
+    display: flex;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    align-items: center;
+    font-size: 20px;
+    color: #000000;
+    background: white;
+    border-radius: 32px;
+    
+  }
+  
+  .username a{
+    color: black;
+    
+  }
+  
+  .username img{
+    height: 20px;
+  }
+  
+  
+  
+  

@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");:root {
+    --padding-container: 100px 0;
+    --color-title: #001A49
+}
+@keyframes reveal {
+    from {
+        opacity: 0;
+        clip-path: inset(45% 20% 45% 20%);
+    }
+    to {
+        opacity: 1;
+        clip-path: inset(0% 0% 0% 0%);
+    }
+}
+
+
+    .revealing-image {
+        /* Create View Timeline */
+        view-timeline-name: --revealing-image;
+        view-timeline-axis: block;
+
+        /* Attach animation, linked to the  View Timeline */
+        animation: linear reveal both;
+        animation-timeline: --revealing-image;
+
+        /* Tweak range when effect should run*/
+        animation-range: entry 25% cover 50%;
+    }
+
+
+figure{
+    display: flex;
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+
+img{
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+body {
+    font-family: Poppins,sans-serif
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .4s ease-in-out,transform .4s ease-in-out
+}
+
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0)
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var( --padding-container);
+}
+
+.container1 {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 25px 0;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    color: #fff
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(rgb(0 75 255 / 83%) 0,rgb(0 0 0 / 87%) 100%),url(../../IMG/);
+    background-size: cover;
+    height: 60%;
+    width: 100%;
+    clip-path: polygon(0 0,100% 0,100% 80%,50% 95%,0 80%);
+    z-index: -1
+}
+
+.nav {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    padding: 30px;
+    z-index: 1000;
+    animation: change cubic-bezier(.91,.18,.7,.95) both;
+    animation-timeline: scroll(root);
+    animation-range: 0 750px
+}
+
+@keyframes change {
+    to {
+        background: rgb(36 137 132 / 63%);
+        backdrop-filter: blur(5px);
+        font-weight: bold
+    }
+}
+
+.nav_title {
+    font-weight: 300
+}
+
+.nav_link {
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 1em
+}
+
+.nav_items {
+    list-style: none;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+}
+
+.nav_links {
+    color: #fff5f5;
+    text-decoration: none;
+    font-weight: bolder
+}
+
+.nav_menu {
+    margin-left: auto;
+    cursor: pointer;
+    display: none
+}
+
+.nav_img {
+    display: block;
+    width: 30px
+}
+
+.nav_close {
+    display: var(--show,none)
+}
+
+.hero_container {
+    margin-top: 100px;
+    max-width: 800px;
+    display: grid;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 1em;
+    padding-bottom: 100px;
+    text-align: center
+}
+
+.hero_title {
+    font-size: 3rem
+}
+
+.hero_parragraph {
+    margin-bottom: 20px
+}
+
+.cta {
+    display: inline-block;
+    background-color: rgb(58 52 191);
+    justify-self: center;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 7px;
+    padding: 13px 30px;
+    border-radius: 32px
+}
+
+.about {
+    text-align: justify
+}
+
+.subtitle {
+    color: var(--color-title);
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    text-align: center
+}
+
+.about_paragraph {
+    margin-top: 15px;
+    line-height: 2;
+    text-align: center;
+}
+
+.about_main {
+    padding-top: 33px;
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    gap: 1.5em;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit,minmax(260px,auto))
+}
+
+.about_icons {
+    display: grid;
+    gap: 1em;
+    justify-items: center;
+    width: 270px;
+    overflow: hidden;
+    margin: 0 auto
+}
+
+.about_icon {
+    width: 60px
+}
+
